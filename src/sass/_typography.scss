@@ -1,0 +1,155 @@
+.video{
+  text-align: center;
+  display: block;
+
+  &__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -100;
+    overflow: hidden;
+  }
+
+  &__content{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+///////////////////////////
+.input{
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  &--inherit-bg{
+    background: transparent;
+  }
+  &--default-bg{
+    background: rgba($color-light-1, .5);
+  }
+  border: none;
+  &--border{
+    border: 1px solid $color-blue-1 !important;
+  }
+  border-bottom: 3px solid transparent;
+  width: 85%;
+  transition: all .3s;
+
+  @include validInput;
+}
+//////////////////////////
+%heading{
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.heading--1{
+  @extend %heading;
+  font-size: 7.5rem;
+  padding-bottom: .8rem;
+  font-weight: 700;
+  display: block;
+  letter-spacing: 3.5rem;
+  animation-name: moveLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  color: #fff;
+  position: relative;
+  &::after{
+    @include afterLine;
+    width: 15rem;
+  }
+}
+
+.heading--2{
+  @extend %heading;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  margin-bottom: 10rem;
+  letter-spacing: 2rem;
+  position: relative;
+}
+//////////////////////////////////
+.btn{
+  font-size: 2rem;
+  transition: all .3s;
+  color: $color-grey-2;
+
+  &:hover{
+    color: #fff;
+    box-shadow: $box-shadow-ultra-dark;
+  }
+  &,
+  &:link,
+  &:visited{
+    transition: all .3s;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  &:active,
+  &:focus{
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: $box-shadow-dark;
+  }
+  &::after{
+    background: $color-grey-2;
+  }
+  &--inline{
+    padding: 1.8rem 3.5rem;
+    display: inline-block;
+  }
+  &--block{
+    display: block;
+    text-align: center;
+    padding: 1.8rem 0;
+  }
+  &--anim{
+    &:hover{
+      @include hoverEffect;
+
+      opacity: .8;
+      &::after{
+        opacity: 0;
+      }
+    }
+  }
+  &--green{
+    background: $color-green-2;
+  }
+  &--blue{
+    background: $color-blue-1;
+  }
+  &--red{
+    background: $color-red;
+  }
+  &--border{
+    border: #fff solid 3px;
+  }
+  &--link{
+    color: $color-blue-1;
+    padding: 0 !important;
+    display: inline-flex;;
+    .arrow{
+      margin-left: -5rem;
+      opacity: 0;
+      transform: all .5s;
+    }
+    &:hover{
+      box-shadow: none;
+      transform: translateX(4px);
+      color: $color-blue-3;
+      .arrow{
+        opacity: 1;
+        margin-left: .5rem;
+      }
+    }
+  }
+}

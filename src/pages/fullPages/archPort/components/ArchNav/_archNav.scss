@@ -1,0 +1,28 @@
+.archNav{
+  background-color: $color-black-1;
+
+  grid-row: 1 / 7;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-row-gap: 2rem;
+
+@include respond(md){
+    grid-column: 1 / -1;
+    grid-row: nav-start / nav-end;
+    grid-template-columns: repeat(4, min-content);
+  }
+  &__link{
+    width: 5.5rem;
+    opacity: .9;
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: 2px;
+    transition: all .2s;
+
+    &:hover{
+      opacity: 1;
+      @include hoverEffect;
+    }
+  }
+}

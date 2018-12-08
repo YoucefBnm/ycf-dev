@@ -1,0 +1,66 @@
+$color-light-1: #EAEBF0;
+$color-light-2: #F5FFFA;
+
+$color-grey-1: #808080;
+$color-grey-2: #DCDCDC;
+
+$color-black-1: #080B12;
+$color-black-2: #0c132e;
+$color-black-3: #27282d;
+
+$color-green-1: #00c7a4;
+$color-green-2: #30E8BF;
+
+$color-blue-1: #0084a1;
+$color-blue-2: #1da1f2;
+$color-blue-3: #07d5db;
+$color-blue-4: #B2FEFA;
+$color-blue-turk: #2BEFEF;
+
+$color-gold: #E0A400;
+
+$color-purple: #8A2BE2;
+
+$color-red: #b21c0e;
+$color-pink: #C33764;
+
+$color-yellow: #FFFF00;
+
+$color-pink: #C33764;
+
+//////////////////////
+$box-shadow-ultra-dark: 0 1rem 6rem rgba($color-black-1, .6);
+$box-shadow-dark: 0 1rem 3rem rgba($color-black-1, .4);
+$box-shadow-light: 0 1rem 2rem rgba($color-light-1, .1);
+////////////////////////
+$section-padding: 10rem 4rem;
+////////////////////////////////
+$linear-gradient-light: linear-gradient(90deg, rgba($color-black-2, .7), rgba($color-black-2, .8), rgba($color-black-1, .9));
+$linear-gradient-dark: linear-gradient(90deg, $color-black-1, $color-black-3, $color-black-1);
+
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+  font-size: 62.5%;
+  @include respond(sm){
+    font-size: 50%;
+  };
+}

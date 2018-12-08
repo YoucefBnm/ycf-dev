@@ -1,0 +1,66 @@
+.contact{
+  margin-top: 8rem;
+  padding: 4rem 0;
+  background: $color-blue-1;
+  display: grid;
+  grid-template-columns: repeat(8, 12%);
+  @include respond(md){
+    grid-template-rows: repeat(2, 1fr);
+  };
+}
+
+.form{
+  @include respond(md){
+    grid-row: 2;
+    grid-column: 1 / -1;
+  };
+  height: 400px;
+  background: rgba($color-black-1, .8);
+  padding: 5rem 2rem;
+  align-self: center;
+  box-shadow: $box-shadow-light;
+  grid-row: 1;
+  z-index: 2;
+  grid-column: 6 / span 3;
+  display: grid;
+  grid-row-gap: 2rem;
+
+  &__group{
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    padding: .5rem 0;
+  }
+  &__icon{
+    fill: $color-green-1;
+    width: 5rem;
+    height: 5rem;
+    align-self: center;
+  }
+  &__input{
+    background: rgba($color-light-1, .2);
+    transition: all .3s;
+    &:focus{
+      box-shadow: $box-shadow-ultra-dark;
+      background: $color-light-1;
+    }
+  }
+  &__btn{
+    border: none;
+    display: block;
+    text-align: center;
+    grid-column: 2 / -1;
+    background: $color-green-1;
+    margin: 0 5rem;
+    padding: 1.5rem 0;
+  }
+}
+
+.wrap{
+  opacity: .8;
+  grid-row: 1;
+  grid-column: 2 / span 7;
+  transition: all .3s;
+  &:hover{
+    opacity: 1;
+  }
+}

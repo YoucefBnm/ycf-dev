@@ -1,0 +1,44 @@
+@import "../../../sass/mixins";
+@import "../../../sass/base";
+@import "../../../sass/animations";
+@import "../../../sass/typography";
+
+.videoHead{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba($color-black-1, .5),rgba($color-grey-1, .5), rgba($color-black-3, .5));
+  &__video{
+
+    &--bg{
+      height: 100%;
+    }
+    &--content{
+      object-fit: fill;
+    }
+  }
+
+  &__content{
+    line-height: 1;
+    padding: 0 4rem;
+    @include respond(sm){
+      padding: 0 1.5rem;
+    };
+  }
+  &__heading{
+    margin-bottom: 5rem;
+    @include respond(md){
+      font-size: 4rem !important;
+      line-height: 1.5 !important;
+    };
+    @include respond(sm){
+      font-size: 3rem !important;
+    };
+  }
+  &__text{
+
+    font-size: 3.5rem;
+    color: $color-blue-4;
+  }
+}

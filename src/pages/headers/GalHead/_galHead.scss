@@ -1,0 +1,81 @@
+@import "../../../sass/mixins";
+@import "../../../sass/base";
+@import "../../../sass/animations";
+@import "../../../sass/typography";
+
+.galHead{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 50%));
+  grid-template-rows: repeat(2, 50vh);
+
+  &__container{
+    position: relative;
+    display: grid;
+    grid-template-rows: [row-start] 35vh 15vh [row-end];
+    grid-template-columns: [col-start] 100% [col-end];
+    &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: all .3s ease-in-out;
+    }
+    &:hover{
+      &::after{
+        background: transparent;
+      }
+    }
+    &--1{
+      &::after{
+        background: rgba($color-blue-1, .8);
+      }
+    }
+    &--2{
+      &::after{
+        background: rgba($color-pink, .8);
+      }
+    }
+    &--3{
+      &::after{
+        background: rgba($color-black-3, .8);
+      }
+    }
+    &--4{
+      &::after{
+        background: rgba($color-purple, .8);
+      }
+    }
+
+    span{
+      grid-column: col-start / col-end;
+      align-self: end;
+      grid-row: 1 / 2;
+      font-size: 5rem;
+      @include respond(sm){
+        font-size: 2.5rem;
+      };
+      font-weight: 700;
+      color: $color-light-1;
+      text-transform: uppercase;
+      z-index: 12;
+      padding: 4rem 0 0 2rem;
+    }
+    p{
+      padding: 0 0 2rem 2rem;
+      grid-column: col-start / col-end;
+      grid-row: 2 / 3;
+      font-size: 2rem;
+      color: $color-grey-2;
+      z-index: 12;
+    }
+  }
+  &__bg{
+    width: 100%;
+    height: 100%;
+    grid-row: row-start / row-end;
+    grid-column: col-start / col-end;
+  }
+}

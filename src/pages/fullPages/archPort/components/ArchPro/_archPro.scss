@@ -1,0 +1,106 @@
+.profeciency{
+  grid-column: main-start / col-end 8;
+  grid-row: 3 / 5;
+  width: 100%;
+  background: #000046;  /* fallback for old browsers */
+  background: $color-black-1;
+  color: #fff;
+
+  padding: 5rem 0;
+@include respond(md){
+    grid-row: 4 / 5;
+  }
+  .label-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+
+
+  }
+  &__group{
+    display: grid;
+    padding: 1rem 0;
+    grid-gap: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    @include respond (sm){
+      grid-gap: .5rem;
+    }
+    h3{
+      font-size: 2rem;
+      justify-self: center;
+      align-self: center;
+
+      @include respond(sm){
+        justify-self: start;
+        margin-left: 1rem;
+      }
+    }
+  }
+  &__group-detail{
+
+    p{
+      font-size: 1.6rem;
+    }
+  }
+}
+.progress{
+  height: 1.8rem;
+  background-color: $color-light-2;
+  border-radius: 0 5px 5px 0;
+
+
+  .expert{
+    width: 85%;
+    background-color: lighten($color-red, 40%);
+  }
+  .mid-expert{
+    width: 70%;
+    background-color: lighten($color-red, 50%);
+  }
+  .legend{
+    width: 99%;
+    background-color: lighten($color-red, 25%);
+  }
+  .mid-legend{
+    width: 90%;
+    background-color: lighten($color-red, 10%);
+  }
+  .intermediaire{
+    width: 50%;
+    background-color: $color-blue-2;
+  }
+}
+
+.progress .bar{
+  height: 1.8rem;
+}
+
+.bar{
+  border-radius: 0 20px 20px 0;
+}
+
+.title{
+  display: inline-block;
+  background-color: $color-blue-1;
+  padding: 1rem;
+  border-radius: 5px 5px 0 0;
+  .fa{
+    font-size: 2.5rem;
+    color: $color-green-2;
+    margin-right: 2rem;
+  }
+  span{
+    font-size: 1.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
+  }
+}
+.profeciency-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 35rem));
+
+}

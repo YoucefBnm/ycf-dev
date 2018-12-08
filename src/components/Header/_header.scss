@@ -1,0 +1,34 @@
+.header{
+  height: 90vh;
+  background: $linear-gradient-light;
+  border-bottom: 2px solid rgba($color-grey-2, .5);
+  &__content{
+    padding: $section-padding;
+    line-height: 1.5;
+  }
+
+  &__heading{
+    display: inline-block;
+    margin-bottom: 8rem;
+  }
+  &__text{
+    font-size: 2.2rem;
+    color: $color-grey-2;
+    strong{
+      font-size: 2em;
+      font-weight: 700;
+      color: $color-light-2;
+    }
+  }
+  &__btn{
+    font-size: 1.8rem;
+    margin-top: 4rem;
+  }
+
+  .video{
+    &__bg{
+
+      height: 90vh;
+    }
+  }
+}

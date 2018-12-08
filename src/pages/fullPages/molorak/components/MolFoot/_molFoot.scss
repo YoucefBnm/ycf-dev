@@ -1,0 +1,65 @@
+.molFoot{
+  background: $color-black-1;
+  border-top: 3px solid $color-blue-2;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-gap: 3rem;
+  &__logo{
+    justify-self: center;
+  }
+  &__container{
+    display: grid;
+    justify-items: center;
+    grid-gap: 5rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    @include respond(sm){
+      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+
+    };
+  }
+  &__nav{
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+    grid-gap: 2.5rem;
+    align-self: center;
+    justify-self: start;
+    @include respond(sm){
+      display: flex;
+      flex-direction: column;
+      
+    };
+  }
+  &__item{
+    padding: .5rem;
+    list-style: none;
+    transition: .3s all;
+    &:hover{
+      background: rgba(#fff, .2);
+      border-radius: 3px;
+    }
+    &:hover .molFoot__link{
+      color: $color-light-1;
+    }
+  }
+  &__link{
+    text-decoration: none;
+    color: $color-grey-1;
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+
+  &__copyright{
+    padding: .5rem;
+    font-size: 1.4rem;
+    color: darken($color-grey-2, 20%);
+
+    a{
+      text-decoration: none;
+      color: $color-blue-1;
+    }
+    strong{
+      color: $color-green-2;
+    }
+  }
+}

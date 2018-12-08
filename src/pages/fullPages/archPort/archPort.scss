@@ -1,0 +1,27 @@
+@import "../../../sass/mixins";
+@import "../../../sass/base";
+@import "../../../sass/animations";
+@import "../../../sass/typography";
+
+@import "./components/ArchHead/archHead";
+@import "./components/ArchNav/archNav";
+@import "./components/ArchResume/archResume";
+@import "./components/ArchPro/archPro";
+@import "./components/ArchGal/archGal";
+@import "./components/ArchContact/archContact";
+
+.wrapper{
+  margin-top: 63px;
+  display: grid;
+  grid-template-rows: 80vh repeat(5, min-content);
+  grid-template-columns: [nav-start] 8rem [nav-end main-start]
+                         minmax(25rem, 1fr) [center-start]
+                         repeat(6, [col-start] minmax(min-content, 15rem) [col-end])
+                         [center-end] max-content [main-end];
+
+  @include respond(md){
+    grid-template-rows: [nav-start] 6rem [nav-end] 80vh  min-content repeat(5, min-content);
+    grid-template-columns: [main-start] minmax(25rem, 1fr)[center-start] repeat(6, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] max-content [main-end];
+  };
+
+}

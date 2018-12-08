@@ -1,0 +1,84 @@
+.rfsHead{
+  padding: 8rem 4rem;
+  background: linear-gradient(90deg, $color-black-2, $color-blue-1, $color-green-2);
+  @include respond(md){
+    padding: 4rem 0;
+  };
+  border-bottom: 3px solid $color-red;
+  &__row{
+    display: flex;
+    justify-content: space-around;
+    @include respond(md){
+      flex-wrap: wrap;
+    };
+    &--2{
+      @include respond(md){
+        display: none;
+      };
+    }
+    &--3{
+      @include respond(sm){
+        display: none;
+      };
+    }
+    img{
+      position: relative;
+      z-index: 55;
+      opacity: .1;
+      width: 12rem;
+      height: 12rem;
+      transition: all .3s;
+      &:hover{
+        opacity: 1;
+        @include hoverEffect;
+      }
+    }
+  }
+
+  &__content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 10rem 8rem;
+    line-height: .5;
+    flex-direction: column;
+    @include respond(sm){
+      padding: 4rem 2rem;
+    };
+    span{
+      font-size: 3rem;
+      color: $color-grey-2;
+      line-height: 1.5;
+      @include respond(sm){
+        font-size: 2rem;
+      };
+    }
+  }
+  &__logo-box{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    align-items: center;
+    @include respond(sm){
+      justify-content: center;
+      flex-direction: column;
+    };
+    img{
+      height: 70px;
+      width: auto;
+      margin-right: 2rem;
+      @include respond(md){
+        margin-bottom: 4rem;
+      };
+    }
+    h2{
+      font-size: 4rem;
+      color: $color-yellow;
+      @include respond(sm){
+        font-size: 3rem;
+        line-height: 1.3;
+      };
+    }
+  }
+}

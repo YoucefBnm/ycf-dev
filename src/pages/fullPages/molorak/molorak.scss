@@ -1,0 +1,12 @@
+@import "../../../sass/mixins";
+@import "../../../sass/base";
+@import "../../../sass/animations";
+@import "../../../sass/typography";
+
+@import "./components/MolHead/molHead";
+@import "./components/MolAbout/molAbout";
+@import "./components/MolServices/molServices";
+@import "./components/MolDiscover/molDiscover";
+@import "./components/MolContact/molContact";
+@import "./components/MolReview/molReview";
+@import "./components/MolFoot/molFoot";

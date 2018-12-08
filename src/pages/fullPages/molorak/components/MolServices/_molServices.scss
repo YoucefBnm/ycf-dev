@@ -1,0 +1,57 @@
+.molServices{
+  background: linear-gradient(90deg, $color-black-3, $color-blue-1, darken($color-purple, 30%));
+  padding: $section-padding;
+  @include respond(md){
+    padding: 8rem 2rem;
+  };
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  @include respond(sm){
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  };
+  grid-gap: 6rem;
+  align-items: start;
+
+  &__card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+    grid-template-rows: max-content 1fr;
+    @include respond(sm){
+      display: table;
+    };
+  }
+
+  &__icon{
+    @include respond(sm){
+      grid-column: 2 / -1;
+      margin-bottom: 3rem;
+    };
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    fill: none;
+    stroke: $color-blue-4;
+    box-shadow: $box-shadow-light;
+    padding: 2rem;
+    border-radius: 50%;
+    stroke-width: .5;
+    fill: none;
+    align-self: center;
+    width: 18rem;
+    height: 18rem;
+  }
+  &__heading{
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    font-size: 2.5rem;
+    color: $color-light-1;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  &__text{
+    align-self: center;
+    grid-column: 2 / -1;
+    font-size: 1.8rem;
+    color: $color-grey-2;
+    font-weight: 300;
+  }
+}

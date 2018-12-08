@@ -1,0 +1,105 @@
+@import "../../../sass/mixins";
+@import "../../../sass/base";
+@import "../../../sass/animations";
+@import "../../../sass/typography";
+
+.headerSlide{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($color-black-3, .6);
+  }
+}
+
+.slider{
+  transition: all .5s ease-in-out;
+  opacity: 0;
+  max-height: 100vh;
+  max-width: 100%;
+  &__heading{
+    margin: 8rem 0;
+    @include respond(md){
+      font-size: 4rem !important;
+      letter-spacing: 1rem !important;
+      line-height: 1.5 !important;
+    };
+  }
+  &[data-active="true"]{
+    opacity: 1;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+  &__bg{
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  &__content{
+    padding: 10rem 8rem;
+    @include respond(md){
+      padding: 6rem 2.5rem;
+    };
+    position: absolute;
+    z-index: 5;
+    line-height: .5;
+  }
+  &__heading{
+
+  }
+  &__text{
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: $color-grey-2;
+  }
+}
+@keyframes moveInLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.leftArr{
+  position: absolute;
+  bottom: 5rem;
+  left: 3rem;
+  z-index: 999;
+  width: 10rem;
+  height: 10rem;
+}
+.leftArr, .rightArr{
+  fill: $color-grey-1;
+  background: rgba($color-black-3, .8);
+  padding: 2rem;
+  border-radius: 50%;
+  transition: .3s all;
+  cursor: pointer;
+  &:hover{
+    background: $color-black-1;
+    fill: $color-light-1;
+    @include hoverEffect;
+  }
+}
+.rightArr{
+  position: absolute;
+  bottom: 5rem;
+  right: 3rem;
+  z-index: 999;
+  width: 10rem;
+  height: 10rem;
+}

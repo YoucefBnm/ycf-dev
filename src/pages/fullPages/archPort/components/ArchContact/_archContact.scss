@@ -1,0 +1,82 @@
+.archContact{
+  grid-column: main-start / main-end;
+  grid-row: 6 / 7;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &__title{
+    display: block;
+    font-size: 4.5rem;
+    @include respond(sm){
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: .5rem;
+    };
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    color: $color-grey-2;
+    position: relative;
+    z-index: -5;
+    margin: 8rem 0;
+    opacity: .7;
+    &::after{
+      @include afterLine;
+      width: 8rem;
+      height: 6px;
+    }
+  }
+  &__details{
+    padding: 0 5rem;
+    position: relative;
+    box-shadow: $box-shadow-light;
+    display: grid;
+    grid-row-gap: 3.5rem;
+  }
+  &__details-group{
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    grid-row-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 35rem));
+    p{
+      font-size: 1.7rem;
+      color: $color-grey-2;
+      align-self: center;
+      justify-self: end;
+    }
+  }
+  &__details-title{
+    display: flex;
+    align-items: center;
+    p{
+      font-size: 2rem;
+      color: $color-grey-1;
+    }
+  }
+  &__icon{
+    width: 5rem;
+    margin-right: 4rem;
+    fill: none;
+    stroke: $color-blue-turk;
+    justify-self: center;
+  }
+  &__video{
+    object-position: bottom;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba($color-black-1, .5);
+    }
+  }
+  &__content{
+    object-position: bottom;
+    object-fit: fill;
+  }
+  &__bg{
+    height: 100%;
+  }
+}

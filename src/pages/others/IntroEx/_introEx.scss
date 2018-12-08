@@ -1,0 +1,81 @@
+@import "../../../sass/mixins";
+@import "../../../sass/base";
+@import "../../../sass/animations";
+@import "../../../sass/typography";
+
+.introEx{
+  padding: $section-padding;
+  @include respond(sm){
+    padding: 10rem 3rem;
+  };
+  background: $color-black-3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(43%, 1fr));
+  grid-gap: 10rem;
+  &__intro{
+
+  }
+  &__heading{
+    margin-bottom: 2rem;
+    @include respond(md){
+      font-size: 3.5rem;
+      letter-spacing: 2.5rem;
+    };
+  }
+  &__slogan{
+    color: $color-grey-2;
+    text-transform: uppercase;
+    font-size: 4rem;
+  }
+
+  &__details{
+    margin-top: 5rem;
+    line-height: 1.5;
+    li{
+      text-transform: capitalize;
+      font-size: 1.6rem;
+      color: $color-grey-1;
+      list-style: square;
+      &:not(:last-child){
+        margin-bottom: 1.5rem;
+      }
+
+    }
+  }
+
+  &__container{
+    display: grid;
+    grid-template-columns: 50% 20% 20% 10%;
+    grid-template-rows: repeat(5, 20%);
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    box-shadow: $box-shadow-light;
+    position: relative;
+    transition: all .3s;
+    opacity: .8;
+    &:hover{
+      @include hoverEffect;
+      z-index: 5;
+      opacity: 1;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: red;
+    }
+    &--1{
+      grid-row: 2 / span 4;
+      grid-column: 1 / span 2;
+    }
+    &--2{
+      grid-row: 1 / span 4;
+      grid-column: 2 / span 5;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.molAbout{
+  padding: $section-padding;
+  @include respond(sm){
+    padding: 10rem 2rem;
+  };
+  &__heading{
+    color: $color-grey-1;
+  }
+  &__container{
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    @include respond(sm){
+      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+
+    };
+    grid-gap: 8rem;
+    @include respond(md){
+      grid-column-gap: 13rem;
+    };
+  }
+  &__imgs{
+    display: grid;
+    grid-template-columns: repeat(2, 5rem) repeat(3, 20%);
+    grid-template-columns: repeat(5, 8rem);
+    &:hover .molAbout__img:not(:hover){
+      transform: scale(.8);
+      opacity: .5;
+    }
+    @include respond(md){
+      display: flex;
+    };
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    box-shadow: $box-shadow-dark;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    opacity: .95;
+    &:hover{
+      opacity: 1;
+      @include hoverEffect;
+      position: relative;
+      z-index: 5;
+    }
+    &--1{
+      grid-row: 1 / 4;
+      grid-column: 2 / 6;
+    }
+    &--2{
+      grid-row: 2 / 5;
+      grid-column: 4 / 7;
+      margin-top: 4rem;
+      @include respond(md){
+        margin-top: 0;
+      };
+
+    }
+    &--3{
+      grid-row: 3 / 6;
+      grid-column: 3 / 6;
+    }
+
+  }
+  &__detail{
+    align-self: center;
+    margin-top: 3rem;
+  }
+  &__text{
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    line-height: 1.4;
+    color: $color-grey-1;
+  }
+  &__title{
+    font-size: 2rem;
+    font-weight: 400;
+    color: $color-black-3;
+    margin-bottom: 2rem;
+    border-top: 1px solid $color-grey-2;
+  }
+
+}

@@ -1,0 +1,112 @@
+.molDiscover{
+  padding: 8rem 0;
+  background: $linear-gradient-light, url('./img/discover-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  &__heading{
+    color: $color-light-1;
+  }
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 8rem;
+    padding: 0 2rem;
+    margin-top: 5rem;
+  }
+  &__intro{
+    font-size: 1.8rem;
+    color: $color-grey-2;
+    align-self: center;
+  }
+  &__icon{
+    fill: $color-grey-1;
+    width: 3rem;
+    height: 3rem;
+    transform: rotate(-90deg);
+    transition: .3s all;
+  }
+  &__tabs{
+    padding: 0;
+  }
+  &__tab{
+
+
+    li{
+      background: $color-light-1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: .5rem;
+      cursor: pointer;
+      border: 1px solid $color-blue-2;
+      border-radius: 5px;
+      text-transform: uppercase;
+      transition: all .3s;
+      padding: .5rem;
+      list-style: none;
+      font-size: 1.8rem;
+      color: $color-blue-1;
+    }
+  }
+  .active &__icon{
+    transform: rotate(90deg);
+    fill: $color-blue-1;
+  }
+  &__tab-content{
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: 25rem repeat(2, min-content);
+    grid-gap: 2rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background-color: $color-grey-2;
+  }
+  &__tab &__tab-content{
+    display: none;
+    transform: translateY(100%);
+  }
+  &__tab &__tab-content.show{
+    display: grid;
+    transform: translateY(0);
+    animation: change .4s cubic-bezier(.175, .885, .32, 1.275);
+  }
+
+  &__tab-imgs{
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    img{
+      width: 100%;
+      height: 100%;
+      opacity: .8;
+      transition: all .2s;
+      &:hover{
+        opacity: 1;
+        transform: translateY(2px);
+        transform: scale(1.01);
+      }
+    }
+  }
+  &__tab-text{
+    font-size: 1.5rem;
+    color: $color-grey-1;
+    line-height: 1.2;
+  }
+  &__btn{
+    text-align: center;
+  }
+
+}
+@keyframes change {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

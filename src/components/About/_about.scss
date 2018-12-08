@@ -1,0 +1,36 @@
+.about{
+  padding: $section-padding;
+  background: $color-light-1;
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    justify-content: center;
+    grid-gap: 3rem;
+  }
+  &__img{
+    justify-self: center;
+    align-self: center;
+    box-shadow: $box-shadow-ultra-dark;
+    width: 27rem;
+    height: 27rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+  &__heading{
+    font-size: 3rem;
+    color: $color-blue-1;
+    font-weight: 400;
+    margin-bottom: 4rem;
+  }
+  &__text{
+    color: $color-grey-1;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    a{
+      color: $color-blue-1;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+  }
+}

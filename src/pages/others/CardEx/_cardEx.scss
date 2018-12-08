@@ -1,0 +1,142 @@
+@import "../../../sass/mixins";
+@import "../../../sass/base";
+@import "../../../sass/animations";
+@import "../../../sass/typography";
+
+.cardsLay{
+  padding: 8rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 5rem;
+  justify-content: center;
+  background: $color-light-2;
+}
+
+.exCard{
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  min-height: 50rem;
+
+  &__side{
+    min-height: 52rem;
+    min-width: 30rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: $box-shadow-ultra-dark;
+
+    &-front{
+      background: $color-black-2;
+    }
+    &-back{
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &--1{
+        background: linear-gradient(135deg, $color-blue-1, $color-blue-3, $color-green-2);
+      }
+      &--2{
+        background: linear-gradient(135deg, $color-pink, $color-red, $color-black-3);
+      }
+      &--3{
+        background: linear-gradient(135deg, $color-black-1, $color-black-3, $color-grey-1);
+      }
+    }
+  }
+
+  &__heading{
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    padding: 9rem;
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    &-title{
+      font-size: 2.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $color-grey-2;
+      position: absolute;
+      text-align: right;
+      bottom: 2rem;
+      right: 0;
+      width: 65%;
+      padding: 1rem .5rem;
+      border-radius: 8px 0 0 8px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      &--1{
+        background: rgba($color-blue-1, .8);
+        width: 45%;
+      }
+      &--2{
+        background: rgba($color-pink, .8);
+        width: 45%;
+      }
+      &--3{
+        background: rgba($color-black-3, .8);
+      }
+    }
+    &--1{
+      background: linear-gradient(135deg, rgba($color-blue-1, .7), rgba($color-blue-3, .8), rgba($color-green-2, .5)), url('../../fullPages/molorak/img/dest-img-1.jpg');
+      background-size: cover;
+      background-blend-mode: screen;
+      background-position: bottom;
+    }
+    &--2{
+      background: linear-gradient(135deg, rgba($color-red, .7), rgba($color-pink, .8), rgba($color-black-3, .7)), url('../../fullPages/molorak/img/discover-bg.jpg');
+      background-size: cover;
+      background-blend-mode: screen;
+      background-position: bottom;
+    }
+    &--3{
+      background: linear-gradient(135deg, rgba($color-black-1, .7), rgba($color-black-3, .7), rgba($color-grey-1, .5)), url('../../fullPages/molorak/img/about-img-1.jpg');
+      background-size: cover;
+      background-blend-mode: screen;
+      background-position: bottom;
+    }
+  }
+
+  &__detail{
+    padding: 3rem 0;
+    ul{
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li{
+        text-align: center;
+        font-size: 1.8rem;
+        padding: 1rem;
+        color: $color-light-2;
+        &:not(:last-child){
+          border-bottom: 1px solid $color-grey-1;
+        }
+      }
+    }
+  }
+
+  &__price{
+    color: $color-light-2;
+    font-size: 6rem;
+  }
+
+  &__btn{
+    padding: 2rem 3.5rem;
+    margin-top: 4rem;
+    border-radius: 35px;
+  }
+  &:hover &__side-front{
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side-back{
+    transform: rotateY(0);
+  }
+}

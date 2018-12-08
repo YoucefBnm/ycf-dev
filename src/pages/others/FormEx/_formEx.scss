@@ -1,0 +1,121 @@
+@import "../../../sass/mixins";
+@import "../../../sass/base";
+@import "../../../sass/animations";
+@import "../../../sass/typography";
+
+.formEx{
+  padding: $section-padding;
+  background: $color-black-3;
+  margin: 8rem;
+  @include respond(sm){
+    margin: 0;
+    padding: 8rem 2rem
+  };
+  border-radius: 5px;
+  &__title{
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $color-blue-3;
+    display: block;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  &__group{
+    display: grid;
+    grid-template-columns: [form-start] 18rem [label-end input-start] 30rem [input-end span-start] 1fr [form-end];
+    grid-template-rows: repeat(2, 5rem);
+    grid-column-gap: 2rem;
+    @include respond(md){
+      grid-template-columns: [form-start] 6rem [label-end input-start] 21rem [form-end];
+      grid-gap: 4rem;
+    };
+
+    span{
+      grid-column: label-end / form-end;
+      grid-row: 2 / 3;
+      font-size: 1.4rem;
+      color: darken($color-grey-2, 40%);
+    }
+  }
+  &__label{
+    align-self: center;
+    font-size: 2rem;
+    color: $color-blue-1;
+  }
+  &__input{
+    grid-column: 2 / 4;
+    width: 90%;
+    &:focus{
+      width: 100%;
+      background: $color-light-1;
+    }
+  }
+
+  &__btn{
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.checkbox {
+  p{
+    font-size: 1.5rem;
+    padding-top: .3rem;
+    color: $color-grey-2;
+  }
+    display: block;
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: 5rem;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: $color-green-2 1px solid;
+    border-radius: 5px;
+
+}
+
+.checkbox:hover input ~ .checkmark {
+    background-color: $color-grey-2;
+}
+
+.checkbox input:checked ~ .checkmark {
+    background-color: $color-green-2;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}

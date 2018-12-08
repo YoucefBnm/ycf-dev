@@ -1,0 +1,45 @@
+.molHead{
+  height: 85vh;
+  background: linear-gradient(125deg, rgba($color-grey-1, .8), rgba($color-blue-2, .6), rgba($color-purple, .6)), url('./img/head-bg.jpg');
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  padding: 2rem 4rem 4rem 4rem;
+  grid-gap: 5rem;
+  @include respond(sm){
+    grid-gap: 0;
+    padding-right: 4rem;
+  };
+  align-items: center;
+  @include respond(md){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  };
+  &__content{
+    span{
+      font-size: 2.5rem;
+      color: $color-blue-4;
+      line-height: 1.5;
+      @include respond(md){
+        font-size: 1.8rem;
+      };
+    }
+  }
+  &__heading{
+    margin-bottom: 5rem;
+    opacity: .8;
+    @include respond(md){
+      font-size: 3.5rem !important;
+      line-height: 1.2;
+    };
+    @include respond(sm){
+      font-size: 2.5rem !important;
+      letter-spacing: .5rem !important;
+      line-height: 1.5 !important;
+    };
+  }
+}
