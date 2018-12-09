@@ -5,11 +5,24 @@
   &__content{
     padding: $section-padding;
     line-height: 1.5;
+    @include respond(md){
+      padding: 6.5rem 3rem 0 3rem;
+    };
+    @include respond(sm){
+      padding: 8.5rem 1rem 0 3rem;
+    };
   }
 
   &__heading{
     display: inline-block;
     margin-bottom: 8rem;
+    @include respond(md){
+      margin-bottom: 3.5rem;
+    };
+    @include respond(sm){
+      font-size: 4rem !important;
+      letter-spacing: 2.5rem !important;
+    };
   }
   &__text{
     font-size: 2.2rem;
@@ -23,6 +36,9 @@
   &__btn{
     font-size: 1.8rem;
     margin-top: 4rem;
+    @include respond(md){
+      margin-top: 2.5rem;
+    };
   }
 
   .video{

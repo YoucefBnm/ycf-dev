@@ -62,7 +62,6 @@
     align-items: center;
     @include respond(sm){
       justify-content: center;
-      flex-direction: column;
     };
     img{
       height: 70px;

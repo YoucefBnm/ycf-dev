@@ -35,28 +35,28 @@
   &__container{
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 5rem;
     text-align: center;
   }
 }
 
 .chart{
-  display: grid;
-  justify-content: center;
-  grid-gap: 2rem;
 
   @include respond(sm){
     justify-content: start;
   };
   &__icon{
+
     margin-bottom: 3rem;
     justify-self: center;
     margin-top: 1.5rem;
+    width: 8rem;
+    height: 8rem;
   }
 
   &__round{
-    max-width: 100%;
-    max-height: 25rem;
+
   }
   &__roundBg{
     fill: none;

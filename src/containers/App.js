@@ -27,7 +27,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Nav style={{backgroundColor: 'red'}}/>
+        <Nav />
         <Router>
           <Switch>
             <Route exact path="/" render={props=>

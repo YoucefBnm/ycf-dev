@@ -37,7 +37,7 @@ const frams = [
 const Chart = ({d, strokeDasharray, percentage, stroke, fill, style}) =>{
   return (
     <div className="chart">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 32 32" className="chart__icon">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="chart__icon">
         <path fill={fill} d={d} />
       </svg>
       <svg viewBox="0 0 36 36" className="chart__round">

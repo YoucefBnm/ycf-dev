@@ -1,6 +1,9 @@
 .molReviews{
   background: linear-gradient(120deg, $color-black-1, $color-black-2, darken( $color-blue-1, 20%));
   padding: $section-padding;
+  @include respond(md){
+    padding: 10rem 2rem;
+  };
   &__container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(46%, 1fr));
@@ -70,7 +73,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 
     img{
       @include respond(sm){
