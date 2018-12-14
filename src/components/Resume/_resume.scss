@@ -13,6 +13,8 @@
     fill: none;
     stroke: $color-blue-turk;
     stroke-width: 1;
+    width: 6.5rem;
+    height: 6.5rem;
   }
   &__detail{
     font-size: 1.8rem;
@@ -24,6 +26,8 @@
 .skills{
   padding: $section-padding;
   background: $color-light-2;
+  display: grid;
+  grid-row-gap: 5rem;
   @include respond(sm){
     padding: 8rem 2rem;
   };
@@ -74,6 +78,10 @@
       position: absolute;
       bottom: 5%;
     }
+  }
+  &__round{
+    width: 100%;
+    height: 100%;
   }
   &__icon{
     margin-bottom: 3rem;
