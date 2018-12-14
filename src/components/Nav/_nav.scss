@@ -15,6 +15,7 @@
   };
 
   &__logo{
+    text-decoration: none;
     justify-self: end;
     @include respond(md){
       justify-self: start;

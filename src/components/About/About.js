@@ -10,12 +10,12 @@ export default () =>{
         <div className="about__content">
           <h3 className="about__heading">Youcef BNM front end developer</h3>
           <p className="about__text">
-            I live in Oran <a href="#google-map">Algeria</a>.
+            Lives in Oran <a href="#contact">Algeria</a>.
             Youcef or Josef, spend most of his time coding and developing
             his skills in web development he is ready to go to the next level
-             as a professional web developer, I'm very passionate about
+             as a professional web developer, very passionate about
              computer science in general and specifically web development.
-             Youcef has also a bachelor degree in "management" so he is familiar
+             having also a bachelor degree in "management" so he is familiar
               with leadership managing tasks finance accounting.
           </p>
         </div>

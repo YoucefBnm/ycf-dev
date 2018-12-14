@@ -15,7 +15,6 @@ class Nav extends React.Component {
     super()
     this.state = {
       isToggleOn: true,
-      backgroundColor: 'red'
      };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -30,7 +29,9 @@ class Nav extends React.Component {
   render(){
     return (
       <nav className={this.state.isToggleOn ? 'nav' : 'nav open'}>
-        <img className="nav__logo" src={Logo} alt="logo" />
+        <a className="nav__logo" href="/">
+          <img src={Logo} alt="logo" />
+        </a>
 
         <ul className={this.state.isToggleOn ? 'nav__navigation' : 'nav__navigation open'}>
           <li className={this.state.isToggleOn ? 'nav__item' : 'nav__item open'}>

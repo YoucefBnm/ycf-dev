@@ -1,6 +1,6 @@
 .about{
-  padding: $section-padding;
   background: $color-light-1;
+  padding: $section-padding;
   &__container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
