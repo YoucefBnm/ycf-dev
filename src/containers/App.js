@@ -33,10 +33,10 @@ class App extends Component {
             <Route exact path="/" render={props=>
               <div className="App">
                 <Header />
-                <About />
-                <Resume />
                 <Features />
                 <Examples />
+                <About />
+                <Resume />
                 <Form />
                 <Footer />
               </div>} />

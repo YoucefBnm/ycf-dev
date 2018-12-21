@@ -1,7 +1,7 @@
 import React from 'react';
 import './_introEx.scss';
 
-import BuildingOne from '../../fullPages/archPort/img/port-img-5.jpg';
+import BuildingOne from '../../fullPages/archPort/img/port-img-8.jpg';
 import BuildingTwo from '../../fullPages/archPort/img/port-img-14.jpg';
 
 export default () =>{

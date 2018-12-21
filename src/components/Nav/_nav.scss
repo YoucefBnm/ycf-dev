@@ -81,10 +81,12 @@
     }
   }
   &__link{
+    border: none;
+    background: none;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.7rem;
-    font-weight: 300;
+    font-weight: 500;
     color: $color-blue-4;
   }
 

@@ -21,7 +21,6 @@
   }
   &__imgs{
     display: grid;
-    grid-template-columns: repeat(2, 5rem) repeat(3, 20%);
     grid-template-columns: repeat(5, 8rem);
     &:hover .molAbout__img:not(:hover){
       transform: scale(.8);
