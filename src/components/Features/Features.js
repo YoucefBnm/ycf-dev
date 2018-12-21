@@ -32,7 +32,7 @@ const cards = [
 const particlesOptions = {
   particles: {
     number: {
-      value: 30,
+      value: 60,
       density:{
         enable: true,
         value_area: 800

@@ -1,46 +1,15 @@
-.contact{
-  padding: $section-padding;
-  background: $color-grey-2;
-  @include respond(md){
-    padding: 8rem 2rem;
-  };
-}
-
-.form{
-  padding: 5rem 2rem;
-  display: grid;
-  grid-row-gap: 2rem;
-
-  &__group{
-    display: grid;
-    grid-template-columns: 5rem 1fr;
-    padding: .5rem 0;
-  }
-  &__icon{
-    fill: $color-green-1;
-    width: 5rem;
-    height: 5rem;
-    align-self: center;
-  }
-  &__input{
-    background: rgba($color-light-1, .2);
-    transition: all .3s;
-    &:focus{
-      box-shadow: $box-shadow-ultra-dark !important;
-      background: $color-light-1;
-    }
-  }
-  &__btn{
-    width: 86%;
-    border: none;
-    background: $color-green-1;
-    padding: 1.5rem 0;
-  }
-}
-
 .wrap{
   opacity: .8;
+  width: 50%;
+  text-align: center;
   transition: all .3s;
+  margin: 0 auto;
+  @include respond(md){
+    width: 80%;
+  };
+  @include respond(sm){
+    width: 100%;
+  };
   &:hover{
     opacity: 1;
   }

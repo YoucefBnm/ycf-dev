@@ -38,7 +38,7 @@ class Nav extends React.Component {
             <a className="nav__link" href="/">home</a>
           </li>
           <li className={this.state.isToggleOn ? 'nav__item nav__item--dropdown' : 'nav__item nav__item--dropdown open'}>
-            <a className="nav__link" href="javascript:void(0)">pages demo</a>
+            <button className="nav__link">pages demo</button>
             <Icon />
             <div className="nav__item nav__item--content">
               <a className="nav__link-second" href="/molorak">travel agency</a>
@@ -47,7 +47,7 @@ class Nav extends React.Component {
             </div>
           </li>
           <li className={this.state.isToggleOn ? 'nav__item nav__item--dropdown' : 'nav__item nav__item--dropdown open'}>
-            <a className="nav__link" href="javascript:void(0)">headers demo</a>
+            <button className="nav__link">headers demo</button>
             <Icon />
             <div className="nav__item nav__item--content">
               <a className="nav__link-second" href="/slider">slider header</a>
@@ -56,7 +56,7 @@ class Nav extends React.Component {
             </div>
           </li>
           <li className={this.state.isToggleOn ? 'nav__item nav__item--dropdown' : 'nav__item nav__item--dropdown open'}>
-            <a className="nav__link" href="javascript:void(0)">other demos</a>
+            <button className="nav__link">other demos</button>
             <Icon />
             <div className="nav__item nav__item--content">
               <a className="nav__link-second" href="/form">form</a>

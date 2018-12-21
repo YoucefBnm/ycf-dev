@@ -6,7 +6,7 @@ export default () =>{
       <h2 className="heading--2 rfsTrend__heading">Trending</h2>
       <div className="rfsTrend__container">
         <div className="rfsTrend__col-img">
-          <img className="rfsTrend__img" src={`https://robohash.org/${Math.random()}?set=set2&size=300x300`} alt="robot" />
+          <img className="rfsTrend__img" src={`https://robohash.org/${Math.floor(Math.random() * 200) + 1}?set=set2&size=300x300`} alt="robot" />
           <a href="/#" className="rfsTrend__col-link">buy astrodis</a>
         </div>
         <div className="rfsTrend__col-detail">
@@ -17,7 +17,7 @@ export default () =>{
 
       <div className="rfsTrend__container container-2">
         <div className="rfsTrend__col-img">
-          <img src={`https://robohash.org/${Math.random()}?set=set1&size=300x300`} alt="robot" className="rfsTrend__img" />
+          <img src={`https://robohash.org/${Math.floor(Math.random() * 200) + 1}?set=set1&size=300x300`} alt="robot" className="rfsTrend__img" />
           <a href="/#" className="rfsTrend__col-link">buy roboto</a>
         </div>
         <div className="rfsTrend__col-detail">
@@ -28,7 +28,7 @@ export default () =>{
 
       <div className="rfsTrend__container">
         <div className="rfsTrend__col-img">
-          <img src={`https://robohash.org/${Math.random()}?set=set3&size=300x300`} alt="robot" className="rfsTrend__img" />
+          <img src={`https://robohash.org/${Math.floor(Math.random() * 200) + 1}?set=set3&size=300x300`} alt="robot" className="rfsTrend__img" />
           <a href="/#" className="rfsTrend__col-link">buy oficcino</a>
         </div>
         <div className="rfsTrend__col-detail">
@@ -39,7 +39,7 @@ export default () =>{
 
       <div className="rfsTrend__container container-2">
         <div className="rfsTrend__col-img">
-          <img src={`https://robohash.org/${Math.random()}?set=set4&size=300x300`} alt="pet" className="rfsTrend__img" />
+          <img src={`https://robohash.org/${Math.floor(Math.random() * 200) + 1}?set=set4&size=300x300`} alt="pet" className="rfsTrend__img" />
           <a href="/#" className="rfsTrend__col-link">buy kitty</a>
         </div>
         <div className="rfsTrend__col-detail">

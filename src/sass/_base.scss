@@ -48,7 +48,6 @@ $linear-gradient-dark: linear-gradient(90deg, $color-black-1, $color-black-3, $c
 }
 
 body {
-  background: $color-black-3;
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -57,8 +56,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
 }
-
+p{
+  font-family: 'Roboto';
+}
 html{
   font-size: 62.5%;
   @include respond(sm){

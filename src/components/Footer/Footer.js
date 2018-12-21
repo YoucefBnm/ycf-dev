@@ -27,7 +27,7 @@ const socialLinks = [
 
 const SocialLink = ({href, fill, d}) =>{
   return (
-      <a className="social__link" href={href} target="_blank">
+      <a className="social__link" href={href} target="_blank" rel="noopener noreferrer">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="social__icon">
           <path fill={fill} d={d} />
         </svg>
