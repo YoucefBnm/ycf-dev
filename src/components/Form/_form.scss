@@ -1,16 +1,5 @@
 .wrap{
-  opacity: .8;
-  width: 50%;
   text-align: center;
   transition: all .3s;
   margin: 0 auto;
-  @include respond(md){
-    width: 80%;
-  };
-  @include respond(sm){
-    width: 100%;
-  };
-  &:hover{
-    opacity: 1;
-  }
 }

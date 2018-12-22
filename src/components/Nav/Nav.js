@@ -19,6 +19,7 @@ class Nav extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+
   handleClick(){
     this.setState({
       isToggleOn: !this.state.isToggleOn
