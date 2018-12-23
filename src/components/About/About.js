@@ -12,7 +12,7 @@ export default () =>{
           <p className="about__text">
             Lives in Oran <a href="#contact">Algeria</a>.
             Youcef or Josef, spend most of his time coding and developing
-            his skills in web development he is ready to go to the next level
+            his skills in web development he is more than ready to go to the next level
              as a professional web developer, very passionate about
              computer science in general and specifically web development.
              having also a bachelor degree in "management" so he is familiar

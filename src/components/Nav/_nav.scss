@@ -132,10 +132,7 @@
       align-self: center;
       width: 3.3rem;
       height: 2px;
-      margin-bottom: .6rem;
-      &:nth-child(2){
-        margin-bottom: calc(.6rem + 1px);
-      }
+      margin-bottom: 5px;
       background: $color-grey-2;
       text-shadow: all .6s ease-in-out;
     }

@@ -1,21 +1,19 @@
 .info{
-  padding: 8rem 4rem;
-  background: $color-black-1;
+  padding: 4rem;
+  background: $linear-gradient-dark;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  grid-gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 3rem;
   &__group{
     display: grid;
-    grid-template-columns: 6rem 28rem;
+    grid-template-columns: 5rem 1fr;
     grid-column-gap: 3rem;
     align-items: center;
   }
   &__icon{
-    fill: none;
-    stroke: $color-blue-turk;
-    stroke-width: 1;
-    width: 6.5rem;
-    height: 6.5rem;
+    fill: $color-blue-turk;
+    width: 5.5rem;
+    height: 5.5rem;
   }
   &__detail{
     font-size: 1.8rem;
@@ -36,7 +34,7 @@
     padding: 2rem;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 5rem;
     text-align: center;
   }
@@ -66,7 +64,7 @@
 
 }
 .chart{
-  max-width: 20rem;
+  min-width: 20rem;
   justify-self: center;
   &__icon-box{
     position: relative;
@@ -80,17 +78,12 @@
       bottom: 5%;
     }
   }
-  &__round{
-    width: 100%;
-    height: 100%;
-  }
   &__icon{
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     justify-self: center;
     margin-top: 1.5rem;
     width: 5.5rem;
     height: 5.5rem;
-
   }
 
   &__roundBg{
