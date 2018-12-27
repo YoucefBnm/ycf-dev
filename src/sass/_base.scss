@@ -35,8 +35,8 @@ $box-shadow-light: 0 1rem 2rem rgba($color-light-1, .1);
 ////////////////////////
 $section-padding: 10rem 4rem;
 ////////////////////////////////
-$linear-gradient-light: linear-gradient(90deg, rgba($color-black-2, .7), rgba($color-black-2, .8), rgba($color-black-1, .9));
-$linear-gradient-dark: linear-gradient(90deg, $color-black-1, $color-black-3, $color-black-1);
+$linear-gradient-light: linear-gradient(-45deg, rgba($color-black-1, .9) 0%, rgba($color-black-2, .8) 100%, rgba($color-black-1, .9));
+$linear-gradient-dark: linear-gradient(90deg, $color-black-1, $color-black-3 0%, $color-blue-1);
 
 
 *,

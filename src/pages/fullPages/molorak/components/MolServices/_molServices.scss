@@ -1,5 +1,5 @@
 .molServices{
-  background: linear-gradient(90deg, $color-black-3, $color-blue-1, darken($color-purple, 30%));
+  background: linear-gradient(-45deg, $color-black-3, $color-blue-1 0%, darken($color-purple, 30%));
   padding: 12rem 4rem;
   @include respond(md){
     padding: 8rem 2rem;

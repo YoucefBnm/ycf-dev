@@ -1,35 +1,36 @@
 .header{
   height: 90vh;
   background: $linear-gradient-light;
+  position: relative;
   &__content{
-    padding: $section-padding;
-    line-height: 1.5;
+    position: absolute;
+    top: 50%;
+    left: 6rem;
+    transform: translateY(-50%);
     @include respond(md){
-      padding: 6.5rem 3rem 0 3rem;
-    };
-    @include respond(sm){
-      padding: 8.5rem 1rem 0 3rem;
+      left: 3rem;
     };
   }
 
   &__heading{
-    display: inline-block;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
     @include respond(md){
       margin-bottom: 3.5rem;
     };
     @include respond(sm){
       font-size: 4rem !important;
-      letter-spacing: 2.5rem !important;
+      letter-spacing: 2rem !important;
     };
   }
   &__text{
     font-size: 2.2rem;
+    font-weight: 300;
     color: $color-grey-2;
-    strong{
+    span{
       font-size: 2em;
-      font-weight: 700;
-      color: $color-light-2;
+      font-weight: 400;
+      color: $color-pink;
+      letter-spacing: 1rem;
     }
   }
   &__btn{
@@ -46,4 +47,13 @@
       height: 90vh;
     }
   }
+}
+
+.particles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
 }

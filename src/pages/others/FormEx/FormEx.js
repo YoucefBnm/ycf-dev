@@ -14,7 +14,7 @@ export default () =>{
       <div className="formEx__group">
         <label className="formEx__label" htmlFor="email">email</label>
         <input type='email' className="input input--border input--default-bg formEx__input" placeholder="enter your email"/>
-        <span>we'll never share your email.</span>
+        <span>we are not facebook, we never share your info.</span>
       </div>
 
       <div className="formEx__group">

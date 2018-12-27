@@ -1,5 +1,4 @@
 import React from 'react';
-import Particles from 'react-particles-js';
 
 const cards = [
   {
@@ -29,17 +28,6 @@ const cards = [
   }
 ];
 
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 60,
-      density:{
-        enable: true,
-        value_area: 800
-      }
-    }
-  }
-}
 
 const Card = ({d, title, text}) =>{
   return (
@@ -57,7 +45,6 @@ const Card = ({d, title, text}) =>{
  export default () =>{
   return (
     <section className="features">
-      <Particles className='particles' params={particlesOptions} />
 
       <h3 className="heading--2 features__heading">how it's done</h3>
 
