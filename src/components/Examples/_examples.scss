@@ -6,7 +6,7 @@
 .utility{
   padding: 3rem 6rem 18rem 6rem;
   display: grid;
-  background: rgba($color-blue-4, .2);
+  background: rgba(#000, .4);
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 3rem;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);

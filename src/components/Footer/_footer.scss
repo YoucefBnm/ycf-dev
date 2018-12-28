@@ -1,5 +1,5 @@
 .footer{
-  background: $color-black-1;
+  background: $color-black-2;
   padding: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13,7 +13,7 @@
     align-items: center;
     span{
       font-size: 2rem;
-      font-weight: 400;
+      font-weight: 700;
       color: $color-light-1;
       text-transform: uppercase;
     }
